@@ -6,6 +6,7 @@ int main()
 	sf::Clock clock;
 	int teste = 0;
 	bool jack = false;
+	sf::RenderWindow window(sf::VideoMode(500, 700), "Tetris"/*, sf::Style::None*/); //descomentar para o jogo perder a janela
 	std::cout << "O jogo foi iniciado!" << std::endl;
 	window.setFramerateLimit(60);
 	sf::RectangleShape retangulo((sf::Vector2f(120, 50)));

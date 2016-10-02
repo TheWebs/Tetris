@@ -3,6 +3,13 @@
 
 int main()
 {
+	sf::VertexArray quadrado(sf::Triangles, 3);
+
+	// define the position of the triangle's points
+	quadrado[0].position = sf::Vector2f(10, 10);
+	quadrado[1].position = sf::Vector2f(100, 10);
+	quadrado[2].position = sf::Vector2f(100, 100);
+	
 	sf::Clock clock;
 	int teste = 0;
 	bool jack = false;
@@ -38,8 +45,10 @@ int main()
 			
 		}
 		window.clear();
+		rotacao += 1;
 		retangulo.setRotation(rotacao);
-		window.draw(retangulo);
+		//window.draw(retangulo);
+		window.draw(quadrado);
 		window.display();
 	}
 
